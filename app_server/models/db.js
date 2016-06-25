@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
 var dbURL = 'mongodb://localhost/Loc8r';
+if (process.env.NODE_ENV === 'production') {
+	dbURL = 'mongodb://smartlin5228:459318049@ds045054.mlab.com:45054/tianyanglin-loc8r';
+}
 mongoose.connect(dbURL);
 //For Windows
 /*
